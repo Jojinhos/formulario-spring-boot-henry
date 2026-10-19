@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+    <head>
+      <meta charset="UTF-8">
+      <title>Paso 3 - Juegos</title>
+      <link rel="stylesheet" type="text/css" th:href="@{/CSS/style.css}">
+    </head>
+   <body>
+     <div class="izquierda">
+        <h1>PASO 3: Juegos Favoritos</h1>
+        
+        <form action="#" th:action="@{/paso3}" th:object="${personasFormulario}" method="post">
+             <input type="hidden" th:field="*{nombre}"/>
+             <input type="hidden" th:field="*{edad}"/>
+             <input type="hidden" th:field="*{fechaNacimiento}"/>
+             <input type="hidden" th:field="*{consola}"/>
+             
+             <table>
+                <tr>
+                    <td class="texto1">Selecciona tus juegos:</td>
+                    <td>
+                        <div>
+                            <input type="checkbox" th:field="*{juegos}" value="Grand Theft Auto V"/> Grand Theft Auto V
+                        </div>
+                        <div>
+                            <input type="checkbox" th:field="*{juegos}" value="The Legend Of Zelda Ocarina of Time"/> The Legend Of Zelda Ocarina of Time
+                        </div>
+                        <div>
+                            <input type="checkbox" th:field="*{juegos}" value="League of Legends"/> League of Legends
+                        </div>
+                        <div>
+                            <input type="checkbox" th:field="*{juegos}" value="Forza Horizon 6"/> Forza Horizon 6
+                        </div>
+                        <div>
+                            <input type="checkbox" th:field="*{juegos}" value="Minecraft"/> Minecraft
+                        </div>
+                    </td>
+                    <td th:if="${#fields.hasErrors('juegos')}" th:errors="*{juegos}">ERROR EN JUEGOS</td>
+                </tr>
+                
+                <tr  class="area-boton">
+                    <td colspan="3">
+                         <button type="submit">Finalizar</button>
+                    </td>
+                </tr>
+             </table>
+        </form>
+     </div>
+   </body>
+</html>

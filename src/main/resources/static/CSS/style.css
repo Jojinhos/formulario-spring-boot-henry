@@ -1,0 +1,86 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	margin:0;
+	
+}
+h1{
+	text-align:center;
+	padding:10px;
+}
+.izquierda{
+	width:50%;
+	border-radius:20px;
+	border:3px solid #878787;
+	padding:10px;
+	margin:auto;
+	margin-top:100px;
+}
+.texto1{
+	font-size:18px;
+	color: #2b2b2b;
+}
+.relleno{
+	width:50%;
+	
+}
+
+input[type="text"]{
+	border-radius:10px;
+	font-size:17px;
+	border:2px solid #878787;
+	color: #4f4f4f; 
+}
+
+input[type="date"]{
+	border-radius:10px;
+	font-size:17px;
+	border:2px solid #878787;
+	color: #878787; 
+}
+.area_boton{
+	width:100%;
+	border:1px solid black;
+}
+button{
+	
+	border-radius:30px;
+	padding:8px;
+	border:2px solid #616161;
+	font-size:18px;
+	
+}
+button:hover{
+	color:#878787;
+	border:2px solid #b3b5b4;
+}
+
+
+
+/*RESULTADO */
+
+.area-resultado {
+	width:40%;
+	border:3px solid #616161;
+	margin:auto;
+	margin-top:100px;
+	padding:30px;
+	border-radius:15px;
+}
+.probar{
+	width:100%;
+	border:2px solid black;
+	padding:6px;
+	color:#424242;
+	background-color:#cccccc;
+	border-radius:20px;
+	 text-decoration: none;
+}
+.probar:hover{
+	border:2px solid #616161;
+	color:#616161;
+	backgfround-color:#cfcfcf;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="https//www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>Paso 1</title>
+		<link rel="stylesheet" type="text/css" th:href="@{/CSS/style.css}">
+	</head>
+	<body>
+		<div class="izquierda">
+		<h1>Paso 1 - Datos Personales</h1>
+		
+		<form action="#" th:action="@{/paso1}" th:object="${personasFormulario}" method="post">
+			<table>
+				<tr>
+                    <tr>
+					<td class="texto1">Nombre:</td>
+					<td><input type="text" th:field="*{nombre}" /></td>
+          
+					<td th:if="${#fields.hasErrors('nombre')}" th:errors="*{nombre}">Nombre error</td>
+				</tr>
+				<tr>
+					<td class="texto1">Edad</td>
+					<td><input type="text" th:field="*{edad}" /></td>
+					<td th:if="${#fields.hasErrors('edad')}" th:errors="*{edad}">Edad Error</td>
+				</tr>
+				<tr>
+					<td class="texto1">Fecha de Nacimiento:</td>
+					<td><input type="date" th:field="*{fechaNacimiento}" /></td>
+					<td th:if="${#fields.hasErrors('fechaNacimiento')}" th:errors="*{fechaNacimiento}">Error en la Fecha</td>
+				</tr>
+
+				<tr class="area_boton">
+					<td colspan="2"><button type="submit">Ir al paso 2</button></td>
+				</tr>
+			</table>
+		</form>
+		</div>
+		<div class="relleno">
+			
+		</div>
+	</body>
+</html>

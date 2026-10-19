@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <title>Paso 2</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/style.css}">
+  </head>
+  <body>
+    <div class="izquierda">
+      <h1>Paso 2: Consolas Favoritas</h1>
+      
+      <form action="#" th:action="@{/paso2}" th:object="${personasFormulario}" method="post">
+         
+         <input type="hidden" th:field="*{nombre}"/>
+         <input type="hidden" th:field="*{edad}"/>
+         <input type="hidden" th:field="*{fechaNacimiento}"/>
+         
+         <table>
+            <tr>
+              <td class="texto1">Consola:</td>
+              <td>
+                <select th:field="*{consola}">
+                    <option value="">-- Selecciona tu consola Favorita --</option>
+                    <option value="PC Gaming">PC</option>
+                    <option value="Nintendo Switch / Wii u">Nintendo</option>
+                    <option value="Play station 4/ play station 5">Sony</option>
+                    <option value="Xbox one">Xbox</option>
+                </select>
+              </td>
+              <td th:if="${#fields.hasErrors('consola')}" th:errors="*{consola}">ERROR AL SELECCIONAR CONSOLA</td>
+            </tr>
+            
+            <tr class="area-boton">
+                <td colspan="3" >
+                    <button type="submit">Siguiente (Paso 3)</button>
+                </td>
+            </tr>
+         </table>
+      </form>
+    </div>
+  </body>
+</html>

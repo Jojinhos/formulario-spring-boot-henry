@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>resultado</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/style.css}">
+</head>
+<body>
+<div class="area-resultado">
+    <h1>Resultado</h1>
+    <h3>Tu informacion</h3>
+    
+    <ol>
+        <li th:each="item : ${listaResultados}" th:text="${item}">Resumen</li>
+    </ol>
+    <br>
+    <h4>Gracias Por Completarlo</h4>
+    <br>
+    <a th:href="@{/}" class="probar">Volver al formulario</a>
+</div>
+</body>
+</html>
